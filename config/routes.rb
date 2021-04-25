@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   # about page
   get "about", to: "about#index"
 
+  # update password page
+
+  get "password", to: "passwords#edit", as: :edit_password
+  patch "password", to: "passwords#update"
+
   # Sign Up Page
   get "sign_up", to: "registrations#new"
   post "sign_up", to: "registrations#create"
